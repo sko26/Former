@@ -4,7 +4,7 @@ import java.awt.*;
 public class Former {
 
     public JPanel createContentPane (){
-
+        // http://fkn.ktu10.com/?q=node/2042
         // We create a bottom JPanel to place everything on.
         // создаём панель, а всё остальное размещаем уже на этой панели
         JPanel totalGUI = new JPanel();
