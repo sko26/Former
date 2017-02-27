@@ -1,39 +1,37 @@
 import javax.swing.*;
+import java.awt.*;
 
-public class Former extends JFrame {
-    public Former()
-    {
-      setSize(400, 300);
-      getContentPane().setLayout(null);
-//        this.add(getJLabel(), null);
-//        this.add(getJTextField(), null);
-//        this.add(getJButton(), null);
-      setTitle("make XML form");
+public class Former {
+
+    public JPanel createContentPane (){
+
+        // We create a bottom JPanel to place everything on.
+        // создаём панель, а всё остальное размещаем уже на этой панели
+        JPanel totalGUI = new JPanel();
+        totalGUI.setLayout(null);
+
+        // добавим текст
+        JLabel blueLabel = new JLabel("<html> <br>" +
+                "это наш текст <br>" +
+                "вот ещё одна строка<br>" +
+                "Жизнь прекрасна))<br></html>");
+        blueLabel.setLocation(-60, -30); /* это координаты метки - текста (измените их если
+        тест не виден*/
+        blueLabel.setSize(300, 100); // это размер области с текстом
+        blueLabel.setHorizontalAlignment(0);
+        blueLabel.setForeground(Color.blue); // Это цвет
+        totalGUI.add(blueLabel);
+        // Создаём кнопку
+
+        JButton redButton = new JButton("Это наша кнопка :))");
+        redButton.setLocation(120, 200); // это координаты кнопки
+        redButton.setSize(150,30 ); // это размер кнопки
+        totalGUI.add(redButton);
+
+
+
+        totalGUI.setOpaque(true);
+        return totalGUI;
     }
 
-//    private javax.swing.JLabel getJLabel() {
-//        if(jLabel == null) {
-//            jLabel = new javax.swing.JLabel();
-//            jLabel.setBounds(34, 49, 53, 18);
-//            jLabel.setText("Name:");
-//        }
-//        return jLabel;
-//    }
-
-//    private javax.swing.JTextField getJTextField() {
-//        if(jTextField == null) {
-//            jTextField = new javax.swing.JTextField();
-//            jTextField.setBounds(96, 49, 160, 20);
-//        }
-//        return jTextField;
-//    }
-//
-//    private javax.swing.JButton getJButton() {
-//        if(jButton == null) {
-//            jButton = new javax.swing.JButton();
-//            jButton.setBounds(103, 110, 71, 27);
-//            jButton.setText("OK");
-//        }
-//        return jButton;
-//    }
 }
